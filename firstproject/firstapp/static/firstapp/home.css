@@ -1,0 +1,108 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+@font-face{
+    src: url('font/Inter-Regular.woff2') format('woff2');
+    font-style: normal;
+    font-display: block;
+    font-display: optional;
+    font-family: 'Inter';
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+.logo-div{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100vw;
+    height: 20%;
+}
+ .logo{
+    width: 48px;
+    height: 45px;
+    
+}
+.settings-tab{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    gap: 10vw;
+    margin: 15px;
+}
+
+.size-6{
+    width: 12vw;
+    height: 6vh;
+}
+.first-h3{
+    font-size: 30px;
+    font-family: 'Inter';
+    font-weight: 700;
+    padding-right: 30%;
+}
+.text-place{
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    height: 20vh;
+    justify-content: center;
+    border: 1px solid blue;
+    border-radius: 15px;
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+.input-class{
+    width: 100%;
+    height: 20vh;
+    border: none;
+}
+.input-class::placeholder{
+    font-size: 25px;
+}
+.save-input{
+    width: 30vw; 
+
+  background-color: rgb(0, 0, 123); /* blue background */
+  color: white;              /* text color */
+  padding: 14px 1px;      /*  space inside the button */
+  border: none;              /* remove default border */
+  border-radius: 15px;        /* rounded corners */
+  cursor: pointer;           /* pointer on hover */
+  font-size: 13px;
+  border: none;
+  
+}
+.saved-notes-container{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 90vw;
+    height: 100%;
+
+}
+.saved-notes{
+    display: flex;
+    width: 100%;
+    height: 15%;
+    border: 1px solid blue;
+    border-radius: 15px;
+    padding: 10px; 
+    margin-bottom: 2%; 
+}
+.kebab-box{
+    display: flex;
+    width: 10vw;
+    height: 100%;
+    align-items: center;
+    
+}

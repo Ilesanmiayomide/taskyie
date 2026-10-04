@@ -1,0 +1,199 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('font/Inter-Regular.woff2' ) format('woff2');
+  font-style: normal;
+  font-display: block;
+  font-display: optional;
+}
+* {
+  box-sizing: border-box;
+  margin: 0%;
+}
+body{
+  font-family: 'Inter';
+}
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 5%; 
+  background-color: white;
+}
+
+.toggle_btn{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  width: 80vw;
+  height: 8vh;
+  background-color: rgb(215, 212, 224);
+  border-radius: 19px;
+  align-items:center;
+  margin: 0% auto;
+  padding: 5px;
+  
+
+}
+.toggle_control_left{
+  display: flex;
+  width: 40vw;
+  height: 6vh;
+  border-radius: 15px;
+  color: rgb(156, 154, 154);
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(206, 206, 206);
+  cursor: pointer;
+}
+
+.toggle_control_right{
+  display: flex;
+  width: 40vw;
+  height: 6vh;
+  border-radius: 15px;
+  color: rgb(156, 154, 154);
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(206, 206, 206);
+  cursor: pointer;
+}
+.toggle_control_left.active,
+.toggle_control_right.active {
+  background-color: white;
+  color: blue;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.toggle_control_left_text{
+font-weight: 400;
+}
+.toggle_control_right_text{
+
+font-weight: 400;
+font-size: smaller;
+
+}
+
+.toggle_control_left.active p,
+.toggle_control_right.active p{
+  color: blue; 
+}
+.auth-header{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 30vh;
+  gap: 2vh;
+  justify-content: flex-end;
+  align-items: center;
+}
+ #logo{
+ width: 55px;
+ height: 50px;
+} 
+
+h3 {
+  font-family: 'Inter';
+  font-size: 3em;
+}
+
+p{
+  font-size: 100%;
+  font-style: italic;
+} 
+
+.auth-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
+  
+
+}
+.form-group{
+  width: 80vw;
+  height: 10vh;
+}
+.form-group input{
+  width: 80vw;
+  height: 6vh;
+  background-color: rgb(225, 225, 250);
+  border: none;
+}
+.input-span-wrapper{
+  display: flex;
+}
+.auth-form .icon{
+  display: flex;
+  width: 12vw;
+  height: 6vh;
+  /* margin-top: -60px; */
+  background-color: rgb(0, 0, 123);
+  border-radius: 5px;
+  justify-content: center;
+}
+.icon .size-6{
+  top: 0.8vh;
+  color: white;
+  width: 7vw;
+}
+.form-actions{
+  width: 100vw;
+  height: 6vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+ .btn{
+  width: 80vw; /*
+  background-color: rgb(0, 0, 123);
+  color: white;
+  text-decoration: none;
+  border: 5px solid  rgb(0, 0, 123);
+  border-radius: 5%; */
+
+  background-color: rgb(0, 0, 123); /* blue background */
+  color: white;              /* text color */
+  padding: 10px 20px;        /* space inside the button */
+  border: none;              /* remove default border */
+  border-radius: 5px;        /* rounded corners */
+  cursor: pointer;           /* pointer on hover */
+  font-size: 16px;
+  filter:drop-shadow(3px 3px 3px rgb(0, 0, 123));
+   transition: all 0.3s ease;
+}
+.btn:hover {
+  background-color: rgb(0, 0, 189);
+}
+/*.OR{
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+ 
+}*/
+.line{
+  width: 30vw;
+  height: 2px;
+  
+}
+.login-btn{
+display: flex;
+justify-content: center;
+
+}
+.login{
+  background-color: white;
+   width: 80vw; /*
+
+  background-color: rgb(0, 0, 123); /* blue background */
+  color: rgb(0, 0, 123);              /* text color */
+  padding: 10px 20px;        /* space inside the button */
+  border: 1px solid rgb(0, 0, 123);              /* remove default border */
+  border-radius: 5px;        /* rounded corners */
+  cursor: pointer;           /* pointer on hover */
+  font-size: 16px;
+
+}

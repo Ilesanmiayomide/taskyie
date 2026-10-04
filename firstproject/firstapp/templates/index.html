@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A note taking application for users to
+     take down lecture notes and important information"/>
+    <title>Taskyie</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/firstapp/index.css' %}" />
+   <!-- <script defer src="{% static 'firstapp/js/index.js' %}"></script>-->
+</head>
+<body>
+    <div class="wrapper">
+        <div class="logo-div">
+            <img src="{% static '/firstapp/images/taskyie-logo.svg' %}" alt="Taskyie logo" />
+            <h4>Taskyie </h4>
+            <!-- <p>My Notetaking app</p> -->
+         </div>
+         <div class="loader">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+         </div>
+    </div>
+    <script>
+     let a =  setTimeout(()=>{
+    window.location.href="{% url 'login_view' %}"
+}, 5000)
+    </script>
+</body>
+</html>

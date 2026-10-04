@@ -1,0 +1,3 @@
+setTimeOut(()=>{
+    window.location.href=""
+})

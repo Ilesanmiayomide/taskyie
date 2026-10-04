@@ -1,0 +1,67 @@
+*{
+box-sizing:border-box;
+margin: 0%;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('font/Inter-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-display: block;
+  font-display: optional;
+}
+.wrapper{
+    display: flex;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.logo-div{
+    display: flex;
+    justify-content: center;    
+    width: 100vw;
+    height: 40%;
+}
+img{
+    display: inline-block;
+    position: absolute;
+    width: 48px;
+    height: 45px;
+}
+h4{
+    position: absolute;
+    margin-top: 8vh;
+    font-size: 3rem;
+    font-family: 'Inter'; 
+}
+p{
+    margin-top: 30%;
+}
+.loader{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 30px;
+    gap: 15px;
+}
+.loader .dot {
+  width: 15px;
+  height: 15px;
+  background-color: rgb(136, 136, 136);
+  border-radius: 50px; 
+  animation: bounce 1s infinite alternate;
+}
+.loader .dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.loader .dot:nth-child(3) {
+  animation-delay: 0.3s;
+}
+@keyframes bounce {
+  to {
+    opacity: 0.3;
+    transform: translateY(-10px);
+  }
+}
