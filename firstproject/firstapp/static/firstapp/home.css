@@ -1,4 +1,4 @@
-*, *::before, *::after{
+/*  *, *::before, *::after{
     box-sizing: border-box;
     margin: 0%;
     padding: 0%;
@@ -71,13 +71,15 @@
 }
 .save-input{
     width: 30vw; 
+                                                                
 
-  background-color: rgb(0, 0, 123); /* blue background */
-  color: white;              /* text color */
-  padding: 14px 1px;      /*  space inside the button */
-  border: none;              /* remove default border */
-  border-radius: 15px;        /* rounded corners */
-  cursor: pointer;           /* pointer on hover */
+                                                                    
+  background-color: rgb(0, 0, 123); 
+  color: white;              
+  padding: 14px 1px;      
+  border: none;              
+  border-radius: 15px;        
+  cursor: pointer;          
   font-size: 13px;
   border: none;
   
@@ -105,4 +107,781 @@
     height: 100%;
     align-items: center;
     
+}
+
+*/
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+@font-face {
+    src: url('font/Inter-Regular.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    font-family: 'Inter';
+}
+
+
+@font-face {
+    src: url('font/Inter-Bold.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    font-family: 'Inter';
+}
+
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background: #ffffff;
+    color: #090909;
+}
+
+
+.wrapper {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    background: #ffffff;
+
+    overflow-x: hidden;
+
+    padding-bottom: 150px;
+}
+
+
+/* =========================
+   TOP SECTION
+========================= */
+
+.top-section {
+    position: relative;
+
+    width: 100%;
+    height: 220px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.logo-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 115px;
+}
+
+
+.logo {
+    width: 115px;
+    height: auto;
+}
+
+
+.settings-tab {
+    position: absolute;
+
+    right: 5.5%;
+    top: 120px;
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+}
+
+
+.settings-tab svg {
+    width: 48px;
+    height: 48px;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main-content {
+    width: min(92%, 940px);
+    margin: 0 auto;
+}
+
+
+.heading-row {
+    margin-bottom: 42px;
+}
+
+
+.heading-row h1 {
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1;
+
+    font-weight: 700;
+    letter-spacing: -1.5px;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-row {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    width: 100%;
+
+    margin-bottom: 55px;
+}
+
+
+.search-box {
+    flex: 1;
+
+    height: 94px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 32px;
+
+    border: 2px solid #e4e6ef;
+    border-radius: 20px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+
+.search-box svg {
+    width: 43px;
+    height: 43px;
+
+    color: #30343d;
+
+    flex-shrink: 0;
+
+    margin-right: 28px;
+}
+
+
+.search-box input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-family: inherit;
+    font-size: 30px;
+
+    color: #20232a;
+}
+
+
+.search-box input::placeholder {
+    color: #73798a;
+}
+
+
+.filter-button {
+    width: 105px;
+    height: 94px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid #e4e6ef;
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+
+.filter-button svg {
+    width: 42px;
+    height: 42px;
+}
+
+
+/* =========================
+   NOTES
+========================= */
+
+.saved-notes-container {
+    width: 100%;
+}
+
+
+.saved-note {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 305px;
+
+    display: flex;
+
+    border: 2px solid #eceef4;
+    border-radius: 30px;
+
+    padding: 42px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.035);
+}
+
+
+.note-content {
+    padding-right: 50px;
+}
+
+
+.note-content h2 {
+    font-size: clamp(27px, 3vw, 39px);
+    font-weight: 700;
+
+    margin-bottom: 28px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    max-width: 80%;
+}
+
+
+.note-date {
+    color: #515a73;
+
+    font-size: 27px;
+
+    margin-bottom: 25px;
+}
+
+
+.note-description {
+    color: #515a73;
+
+    font-size: 25px;
+
+    margin-bottom: 25px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.note-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+
+    padding: 12px 22px;
+
+    border-radius: 25px;
+
+    background: #f0edff;
+
+    color: #5128ed;
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+.note-tag span {
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: #5128ed;
+}
+
+
+.kebab-box {
+    position: absolute;
+
+    right: 28px;
+    top: 42px;
+
+    width: 45px;
+    height: 55px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+}
+
+
+.kebab-box svg {
+    width: 38px;
+    height: 38px;
+}
+
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 65px;
+
+    text-align: center;
+}
+
+
+.empty-icon {
+    position: relative;
+
+    width: 150px;
+    height: 115px;
+
+    margin-bottom: 20px;
+}
+
+
+.box-body {
+    position: absolute;
+
+    left: 25px;
+    bottom: 0;
+
+    width: 100px;
+    height: 65px;
+
+    background: #dfe5ff;
+
+    border-radius: 8px 8px 18px 18px;
+
+    transform: perspective(150px) rotateX(-8deg);
+}
+
+
+.box-top {
+    position: absolute;
+
+    left: 20px;
+    top: 28px;
+
+    width: 110px;
+    height: 55px;
+
+    background: #d7defc;
+
+    clip-path: polygon(
+        0 40%,
+        20% 0,
+        80% 0,
+        100% 40%,
+        50% 100%
+    );
+}
+
+
+.empty-state h2 {
+    font-size: 34px;
+
+    margin-bottom: 14px;
+}
+
+
+.empty-state p {
+    font-size: 25px;
+
+    color: #596078;
+}
+
+
+/* =========================
+   CREATE NOTE
+========================= */
+
+.text-place {
+    position: fixed;
+
+    left: 50%;
+    bottom: 35px;
+
+    transform: translateX(-50%);
+
+    width: min(93%, 960px);
+
+    height: 115px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 15px 20px;
+
+    background: #ffffff;
+
+    border: 2px solid #e6e8ef;
+
+    border-radius: 32px;
+
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.08);
+
+    z-index: 10;
+}
+
+
+.write-icon {
+    width: 75px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+
+.write-icon svg {
+    width: 48px;
+    height: 48px;
+}
+
+
+.input-class {
+    flex: 1;
+
+    height: 70px;
+
+    resize: none;
+
+    border: none;
+    outline: none;
+
+    padding: 18px 20px;
+
+    font-family: inherit;
+    font-size: 27px;
+
+    background: transparent;
+}
+
+
+.input-class::placeholder {
+    color: #818798;
+}
+
+
+.divider {
+    width: 2px;
+    height: 65px;
+
+    background: #e0e2e8;
+
+    margin: 0 20px;
+}
+
+
+.save-input {
+    height: 85px;
+
+    min-width: 290px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    border: none;
+    border-radius: 28px;
+
+    background: linear-gradient(
+        135deg,
+        #3037bd,
+        #2425a0
+    );
+
+    color: white;
+
+    font-family: inherit;
+    font-size: 27px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow: 0 6px 15px rgba(37, 37, 160, 0.25);
+}
+
+
+.plus {
+    font-size: 45px;
+    font-weight: 300;
+
+    line-height: 0;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+    .wrapper {
+        padding-bottom: 125px;
+    }
+
+
+    .top-section {
+        height: 145px;
+    }
+
+
+    .logo-div {
+        padding-top: 55px;
+    }
+
+
+    .logo {
+        width: 75px;
+    }
+
+
+    .settings-tab {
+        top: 58px;
+        right: 20px;
+
+        width: 45px;
+        height: 45px;
+    }
+
+
+    .settings-tab svg {
+        width: 38px;
+        height: 38px;
+    }
+
+
+    .main-content {
+        width: 90%;
+    }
+
+
+    .heading-row {
+        margin-bottom: 28px;
+    }
+
+
+    .heading-row h1 {
+        font-size: 38px;
+    }
+
+
+    .search-row {
+        gap: 12px;
+        margin-bottom: 28px;
+    }
+
+
+    .search-box {
+        height: 65px;
+        padding: 0 18px;
+
+        border-radius: 15px;
+    }
+
+
+    .search-box svg {
+        width: 30px;
+        height: 30px;
+
+        margin-right: 14px;
+    }
+
+
+    .search-box input {
+        font-size: 19px;
+    }
+
+
+    .filter-button {
+        width: 65px;
+        height: 65px;
+
+        border-radius: 15px;
+    }
+
+
+    .filter-button svg {
+        width: 30px;
+        height: 30px;
+    }
+
+
+    .saved-note {
+        min-height: 210px;
+
+        padding: 25px;
+
+        border-radius: 22px;
+    }
+
+
+    .note-content h2 {
+        font-size: 24px;
+
+        margin-bottom: 18px;
+
+        max-width: 85%;
+    }
+
+
+    .note-date {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+
+    .note-description {
+        font-size: 17px;
+        margin-bottom: 17px;
+    }
+
+
+    .note-tag {
+        padding: 8px 15px;
+        font-size: 15px;
+    }
+
+
+    .note-tag span {
+        width: 8px;
+        height: 8px;
+    }
+
+
+    .kebab-box {
+        right: 15px;
+        top: 23px;
+    }
+
+
+    .kebab-box svg {
+        width: 30px;
+        height: 30px;
+    }
+
+
+    .empty-state {
+        margin-top: 50px;
+    }
+
+
+    .empty-icon {
+        transform: scale(.75);
+        margin-bottom: 0;
+    }
+
+
+    .empty-state h2 {
+        font-size: 25px;
+    }
+
+
+    .empty-state p {
+        font-size: 18px;
+    }
+
+
+    .text-place {
+        bottom: 12px;
+
+        width: 94%;
+        height: 78px;
+
+        padding: 8px 10px;
+
+        border-radius: 22px;
+    }
+
+
+    .write-icon {
+        width: 42px;
+    }
+
+
+    .write-icon svg {
+        width: 30px;
+        height: 30px;
+    }
+
+
+    .input-class {
+        min-width: 0;
+
+        height: 55px;
+
+        padding: 12px 8px;
+
+        font-size: 16px;
+    }
+
+
+    .divider {
+        height: 45px;
+
+        margin: 0 8px;
+    }
+
+
+    .save-input {
+        height: 60px;
+
+        min-width: 125px;
+
+        padding: 0 15px;
+
+        border-radius: 17px;
+
+        font-size: 16px;
+
+        gap: 6px;
+    }
+
+
+    .plus {
+        font-size: 30px;
+    }
 }

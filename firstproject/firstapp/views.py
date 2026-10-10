@@ -29,12 +29,15 @@ def logUserIn(request):
 
         if user is not None:
             login(request, user)
-            return render(request, 'change.html')
+            return redirect('change')
         else:
             # Login failed
             print("Invalid email or password")
     #return render(request, "change.html")
 
+
+def change(request):
+    return render(request, 'change.html')
 
 
 
