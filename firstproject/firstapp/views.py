@@ -42,10 +42,43 @@ def change(request):
 
 
 
+# def createNote(request):
+#     if request.method == "POST":
+#         title = request.POST.get("title")
+#         content = request.POST.get("content")
+#         Note.objects.create(title = title, content = content)
+
+#         print("Note saved:", Note.id, Note.title)
+#         return redirect('createNote')
+#     return render(request, 'change.html')
+
+
+
+# from django.shortcuts import render, redirect
+# from .models import Note
+
 def createNote(request):
+    print("Request method:", request.method)
+
     if request.method == "POST":
+        print("POST request received")
+        print("Form data:", request.POST)
+
         title = request.POST.get("title")
         content = request.POST.get("content")
-        Note.objects.create(title = title, content = content)
+
+        note = Note.objects.create(
+            user=request.user,
+            title=title,
+            content=content
+        )
+
+        print("Note saved:", note.id, note.title)
+
         return redirect('createNote')
+
     return render(request, 'change.html')
+
+
+def displayNote(request):
+    notes = Note.objects.filter(user=request.user)

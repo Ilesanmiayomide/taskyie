@@ -243,7 +243,7 @@
 
 
 
-         <form id="createNoteForm" action="input_note" method="POST">
+         <form id="createNoteForm" action="{% url 'createNote' %}" method="POST">
             {% csrf_token %}
         <div class="form-field">
           <label for="noteTitle">Note title</label>
