@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <title>Note Details</title>
+  <link rel="stylesheet" href="details.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="app-shell">
+    
+
+    <header class="page-header">
+      <button class="icon-button back-button" type="button" aria-label="Go back">
+        <i data-lucide="chevron-left"></i>
+      </button>
+
+      <div class="header-title">
+        <h1>Note Details</h1>
+        <p class="save-status"><span class="status-dot"></span>Saved</p>
+      </div>
+
+      <div class="header-actions">
+        
+        </button>
+        <button class="plain-icon-button" type="button" aria-label="Share note">
+          <i data-lucide="share"></i>
+        </button>
+        <button class="plain-icon-button" type="button" aria-label="More options">
+          <i data-lucide="ellipsis"></i>
+        </button>
+      </div>
+    </header>
+
+    <main class="note-card">
+      <section class="note-heading">
+        <div class="note-icon" aria-hidden="true">
+          <i data-lucide="notebook-pen"></i>
+        </div>
+        <h2>UI/UX Design Tutorial</h2>
+ 
+      </section>
+
+      
+
+      <article class="note-content">
+        
+        <p>Here are some key principles to keep in mind when designing modern, user-friendly interfaces:</p>
+
+        <ol>
+          <li>Keep it simple and focused.</li>
+          <li>Make sure the design is consistent.</li>
+          <li>Prioritise usability and accessibility.</li>
+          <li>Use clear visual hierarchy.</li>
+          <li>Test with real users and iterate.</li>
+        </ol>
+
+        <p class="closing-thought">Great design isn’t just about how it looks,<br class="desktop-break"> it’s about how it works. <span aria-label="sparkles">✨</span></p>
+      
+      </article>
+
+      <div class="note-meta">
+        <i data-lucide="calendar-days" aria-hidden="true"></i>
+        <span>30 Jun, 2026</span>
+        <span class="meta-separator">•</span>
+        <span>Last edited: 30 Jun, 2026</span>
+      </div>
+
+   
+    </main>
+
+
+
+
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

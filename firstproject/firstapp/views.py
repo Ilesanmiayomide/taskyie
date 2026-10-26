@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
+from .models import Note
 # Create your views here.
 def first_view(request):
     return render( request, "index.html")
@@ -41,3 +42,10 @@ def change(request):
 
 
 
+def createNote(request):
+    if request.method == "POST":
+        title = request.POST.get("title")
+        content = request.POST.get("content")
+        Note.objects.create(title = title, content = content)
+        return redirect('createNote')
+    return render(request, 'change.html')
