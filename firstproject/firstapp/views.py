@@ -1,9 +1,12 @@
 from django.shortcuts import render, redirect
+from django.shortcuts import get_object_or_404
 from django.http import HttpResponse
+from django.http import JsonResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from .models import Note
+
 # Create your views here.
 def first_view(request):
     return render( request, "index.html")
@@ -82,3 +85,14 @@ def createNote(request):
 
 def displayNote(request):
     notes = Note.objects.filter(user=request.user)
+    data = list(notes.values('title', 'content'))
+    return JsonResponse(data, safe=False)
+
+
+def noteDetail(request, note_id):
+    note = get_object_or_404(Note, id=note_id, user=request.user
+    )
+
+    return render(request, "notes/note_detail.html", {
+        "note": note
+    })

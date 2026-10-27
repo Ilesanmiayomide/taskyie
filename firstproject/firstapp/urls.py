@@ -6,5 +6,7 @@ urlpatterns = [
         path('create_account/', views.createAccount, name='createAccount'),
         path('log_user_in/', views.logUserIn, name='logUserIn'),
         path('change/', views.change, name='change'),
-        path('input_note/', views.createNote, name='createNote')
+        path('input_note/', views.createNote, name='createNote'),
+        path('home/', views.displayNote, name='displayNote'),
+        path('full_note/', views.noteDetail, name='note_detail')
 ]
