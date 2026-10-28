@@ -85,14 +85,13 @@ def createNote(request):
 
 def displayNote(request):
     notes = Note.objects.filter(user=request.user)
-    data = list(notes.values('title', 'content'))
+    data = list(notes.values('id', 'title', 'content', 'created_at'))
     return JsonResponse(data, safe=False)
 
 
 def noteDetail(request, note_id):
-    note = get_object_or_404(Note, id=note_id, user=request.user
-    )
+    note = get_object_or_404(Note, id=note_id, user=request.user)
 
-    return render(request, "notes/note_detail.html", {
+    return render(request, "details_page.html", {
         "note": note
     })

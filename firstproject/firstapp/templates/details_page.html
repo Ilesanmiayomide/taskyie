@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#ffffff">
   <title>Note Details</title>
-  <link rel="stylesheet" href="details.css">
+  {% load static %}
+  <link rel="stylesheet" href="{% static '/firstapp/details.css' %}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -16,13 +17,20 @@
     
 
     <header class="page-header">
-      <button class="icon-button back-button" type="button" aria-label="Go back">
+      <!-- <button class="icon-button back-button" type="button" aria-label="Go back">
         <i data-lucide="chevron-left"></i>
-      </button>
+        <a href="{% url 'change'%}"></a>
+      </button> -->
+        <a href="{% url 'change'%}" class="icon-button back-button"
+         aria-label="Go back">
+                 <i data-lucide="chevron-left"></i>
+
+        </a>
+      
 
       <div class="header-title">
         <h1>Note Details</h1>
-        <p class="save-status"><span class="status-dot"></span>Saved</p>
+        <!-- <p class="save-status"><span class="status-dot"></span>Saved</p> -->
       </div>
 
       <div class="header-actions">
@@ -42,7 +50,7 @@
         <div class="note-icon" aria-hidden="true">
           <i data-lucide="notebook-pen"></i>
         </div>
-        <h2>UI/UX Design Tutorial</h2>
+        <h2>{{ note.title }}</h2>
  
       </section>
 
@@ -50,25 +58,25 @@
 
       <article class="note-content">
         
-        <p>Here are some key principles to keep in mind when designing modern, user-friendly interfaces:</p>
+        <p>{{ note.content }}</p>
 
-        <ol>
+        <!-- <ol>
           <li>Keep it simple and focused.</li>
           <li>Make sure the design is consistent.</li>
           <li>Prioritise usability and accessibility.</li>
           <li>Use clear visual hierarchy.</li>
           <li>Test with real users and iterate.</li>
-        </ol>
+        </ol> -->
 
-        <p class="closing-thought">Great design isn’t just about how it looks,<br class="desktop-break"> it’s about how it works. <span aria-label="sparkles">✨</span></p>
+        <!-- <p class="closing-thought">Great design isn’t just about how it looks,<br class="desktop-break"> it’s about how it works. <span aria-label="sparkles">✨</span></p> -->
       
       </article>
 
       <div class="note-meta">
         <i data-lucide="calendar-days" aria-hidden="true"></i>
-        <span>30 Jun, 2026</span>
+        <span>{{ note.created_at }}</span>
         <span class="meta-separator">•</span>
-        <span>Last edited: 30 Jun, 2026</span>
+        <!-- <span>Last edited: 30 Jun, 2026</span> -->
       </div>
 
    

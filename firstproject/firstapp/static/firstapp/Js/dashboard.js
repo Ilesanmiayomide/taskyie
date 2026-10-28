@@ -76,7 +76,7 @@ console.log("Search input:", searchInput);
         const data = await response.json();
         console.log(data);
         data.forEach((text)=>{
-            console.log(`h2: ${text.title}, p: ${text.content}`);
+            console.log(`h2: ${text.title}, p: ${text.content}, ${text.id}`);
             
             const title = text.title;
             const content = text.content;
@@ -95,7 +95,8 @@ console.log("Search input:", searchInput);
     const date = document.createElement("div"); date.className = "preview-date";
     const calendar = document.createElement("i"); calendar.setAttribute("data-lucide", "calendar-days");
     const dateText = document.createElement("span");
-    dateText.textContent = new Date().toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
+    // dateText.textContent = new Date().toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
+    dateText.textContent = text.created_at;
     date.append(calendar, dateText); copy.append(heading, preview, date);
 
     const more = document.createElement("button"); more.className = "more-notes"; more.type = "button";
@@ -105,10 +106,17 @@ console.log("Search input:", searchInput);
     article.append(accent, iconWrap, copy, more);
     notesList.prepend(article);
               if (window.lucide) window.lucide.createIcons();
+    
+     article.addEventListener("click", ()=>{
+        note_id = text.id;
+        window.location.href= `/notes/${note_id}/` })
+          
         })
     }
 
     loadText(FETCH_URL)
+
+
 
     // const title = "title";
     // const content = "content";
