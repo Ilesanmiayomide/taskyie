@@ -37,7 +37,7 @@ def logUserIn(request):
         else:
             # Login failed
             print("Invalid email or password")
-    #return render(request, "change.html")
+    return render(request, "index.html")
 
 
 def change(request):
